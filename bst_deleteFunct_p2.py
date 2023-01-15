@@ -83,10 +83,26 @@ class BinarySearchTreeNode:
         return self
 
 def build_tree(elements):
-    print("Building tre with these elements", elements)
+    print("Building tree with these elements", elements)
     root = BinarySearchTreeNode(elements[0])
 
-    for i in range(1,len(elements)):
+    for i in range(1, len(elements)):
         root.add_child(elements[i])
 
     return root
+
+if __name__ == '__main__':
+
+#for numbers
+    numbers = [17, 4, 1, 20, 9, 23, 18, 34, 20]
+    numbers_tree = build_tree(numbers)
+    numbers_tree.delete(20)
+    print("After deleting 20 ", numbers_tree.in_order_traversal())
+
+    print("="*60)
+
+#My Name
+    myName = ["C", "A", "R", "L", "J", "O", "H", "N", "Z", "O", "L", "E", "T", "A"]
+    myName_tree = build_tree(myName)
+    myName_tree.delete("R")
+    print("After deleting the letter R, the output is: \n", myName_tree.in_order_traversal())
