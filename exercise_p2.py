@@ -86,3 +86,20 @@ def build_tree(elements):
         root.add_child(elements[i])
 
     return root
+
+if __name__ == '__main__':
+    numbers_tree = build_tree(["C", "A", "R", "L", "J", "O", "H", "N", "Z", "O", "L", "E", "T", "A"])
+    numbers_tree.delete("J")
+    print("After deleting J: \n", numbers_tree.in_order_traversal()) # this should print [1, 4, 9, 17, 18, 23, 34]
+    print()
+    print("="*60)
+    print()
+    numbers_tree = build_tree(["C", "A", "R", "L", "J", "O", "H", "N", "Z", "O", "L", "E", "T", "A"])
+    numbers_tree.delete("R")
+    print("After deleting R: \n", numbers_tree.in_order_traversal())  # this should print [1, 4, 17, 18, 20, 23, 34]
+    print()
+    print("="*60)
+    print()
+    numbers_tree = build_tree(["C", "A", "R", "L", "J", "O", "H", "N", "Z", "O", "L", "E", "T", "A"])
+    numbers_tree.delete("O")
+    print("After deleting O: \n", numbers_tree.in_order_traversal())  # this should print [1, 4, 9, 18, 20, 23, 34]
