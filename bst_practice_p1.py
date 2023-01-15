@@ -60,3 +60,16 @@ def build_tree(elements):
     for i in range(1, len(elements)):
         root.add_child(elements[i])
     return root
+
+if __name__ == '__main__':
+    numbers = [17, 4, 1, 20, 9, 23, 18, 34, 1]
+    numbers_tree = build_tree(numbers)
+    print(numbers_tree.search(20))
+    print(numbers_tree.in_order_traversal())
+    print("="*40)
+
+    myName = ["C", "A", "R", "L", "J", "O", "H", "N", "Z", "O", "L", "E", "T", "A"]
+    myName_tree = build_tree(myName)
+    print("Does L exists in the list?: ", myName_tree.search("L"))
+    print("Does M exists in the list?: ", myName_tree.search("M"))
+    print(myName_tree.in_order_traversal())
